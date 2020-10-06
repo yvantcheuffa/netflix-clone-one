@@ -11,7 +11,7 @@ import {
 import {IsUserRedirect} from "./helpers/routes";
 
 export default function App() {
-    const user = null;
+    const user = {};
   return (
       <Router>
           <Route exact path={ROUTES.HOME}>
@@ -24,12 +24,19 @@ export default function App() {
               exact
               path={ROUTES.SIGN_IN}
               loggedInPath={ROUTES.BROWSE}
-              user={user}
-          >
+              user={user}>
               <SignIn />
           </IsUserRedirect>
-          <Route exact path={ROUTES.SIGN_UP}>
+
+          <IsUserRedirect
+            exact
+              path={ROUTES.SIGN_UP}
+              loggedInPath={ROUTES.BROWSE}
+              user={user}>
               <SignUp />
+          </IsUserRedirect>
+          <Route>
+              <h1 style={{textAlign: "center"}}>The resource you requested could not be found.</h1>
           </Route>
       </Router>
   );
