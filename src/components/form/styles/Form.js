@@ -7,12 +7,13 @@ export const Container = styled.div`
     flex-direction: column;
     background-color: rgba(0, 0, 0, .75);
     align-items: center;
+    min-height: 560px;
     border-radius: 5px;
     box-sizing: border-box;
     width: 100%;
     margin: auto;
     max-width: 450px;
-    margin-bottom: 90px;
+    margin-bottom: 100px;
     padding: 60px 68px 40px;
 `;
 

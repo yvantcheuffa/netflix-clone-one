@@ -8,18 +8,21 @@ import {
     SignIn,
     SignUp,
 } from "./pages";
-import {IsUserRedirect} from "./helpers/routes";
+import {IsUserRedirect, ProtectedRoute} from "./helpers/routes";
+import { useAuthListener } from './hooks';
 
 export default function App() {
-    const user = {};
+    const { user } = useAuthListener();
   return (
       <Router>
-          <Route exact path={ROUTES.HOME}>
+          <Route path={ROUTES.HOME} exact>
               <Home />
           </Route>
-          <Route exact path={ROUTES.BROWSE}>
+
+          <ProtectedRoute user={user} path={ROUTES.BROWSE} exact>
               <Browse />
-          </Route>
+          </ProtectedRoute>
+
           <IsUserRedirect
               exact
               path={ROUTES.SIGN_IN}
@@ -29,15 +32,13 @@ export default function App() {
           </IsUserRedirect>
 
           <IsUserRedirect
-            exact
+              exact
               path={ROUTES.SIGN_UP}
               loggedInPath={ROUTES.BROWSE}
               user={user}>
               <SignUp />
           </IsUserRedirect>
-          <Route>
-              <h1 style={{textAlign: "center"}}>The resource you requested could not be found.</h1>
-          </Route>
+
       </Router>
   );
 }
