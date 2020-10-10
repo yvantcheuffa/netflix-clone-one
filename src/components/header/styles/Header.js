@@ -6,7 +6,8 @@ export const Background = styled.div`
     display: flex;
     flex-direction: column;
     background: url(${({ src }) => src ? src : '/images/misc/home-bg.jpg'}) top left / cover no-repeat;
-    
+    ${({ hasBottomBorder }) => hasBottomBorder && 'border-bottom: 8px solid #222;' };
+    ${({ hasBottomBorder }) => hasBottomBorder && 'min-height: 80vh;' };
     @media(max-width: 1100px) {
         ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none;`}
     }
@@ -137,7 +138,6 @@ export const Feature = styled(Container)`
 export const ButtonLink = styled(ReactRouterLink)`
     display: block;
     background-color: #e50914;
-    width: 84px;
     height: fit-content;
     color: white;
     border: 0;

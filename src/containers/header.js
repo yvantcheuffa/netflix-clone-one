@@ -1,17 +1,19 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import {Header} from "../components";
 import * as ROUTES from '../constants/routes';
+import {FirebaseContext} from "../context/firebase";
 
-export function HeaderContainer({ children }) {
+export function HeaderContainer({ nextPageName, nextRoute, children, ...restProps }) {
 
-    const [user, setUser] = useState();
+    const {firebase} = useContext(FirebaseContext);
+    const user = firebase.auth().currentUser || {};
 
     return (
-        <Header background={true}>
+        <Header background={true} {...restProps}>
             <Header.Frame>
                 <Header.Logo src="/images/logo/logo.svg" alt="Netflix Clone" to={ROUTES.HOME} />
-                <Header.ButtonLink to={ROUTES.SIGN_IN}>
-                    Sign In
+                <Header.ButtonLink to={ user?.email ? ROUTES.BROWSE : nextRoute }>
+                    { user?.email ? 'Browse' : nextPageName }
                 </Header.ButtonLink>
             </Header.Frame>
             {children}
