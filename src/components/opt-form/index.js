@@ -10,7 +10,6 @@ import {
 
 const handleSubmit = (event) => {
     event.preventDefault();
-    alert("Handling submit...");
 }
 
 export default function OptForm({ children, ...restProps }) {

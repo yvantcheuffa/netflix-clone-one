@@ -1,11 +1,9 @@
 import React, {useContext, useEffect, useState} from "react";
-import  {useContent} from "../hooks";
-import selectionFilter from "../utils/selection-filter";
-import SelectProfileContainer from "../containers/profiles";
 import {FirebaseContext} from "../context/firebase";
 import {Card, Header, Loading, Player} from '../components';
 import * as ROUTES from '../constants/routes';
 import {FooterContainer} from './footer';
+import Fuse from "fuse.js";
 
 export default function BrowseContainer({ slides }) {
     const {firebase} = useContext(FirebaseContext);
@@ -15,6 +13,7 @@ export default function BrowseContainer({ slides }) {
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
     const [slideRows, setSlideRows] = useState([]);
+    const [foundMatches, setFoundMatches] = useState(false)
 
 
     useEffect(() => {
@@ -26,6 +25,31 @@ export default function BrowseContainer({ slides }) {
     useEffect(() => {
         setSlideRows(slides[category]);
     }, [category, slides]);
+
+    useEffect(() => {
+        const fuse = new Fuse(
+            slideRows,
+            {
+                keys: [
+                    'data.description',
+                    'data.title',
+                    'data.genre',
+                    'data.maturity'
+                ],
+            }
+        );
+
+        const results = fuse.search(searchTerm).map(({ item }) => item);
+        if(slideRows.length > 0) {
+            if(results.length > 0) {
+                setSlideRows(results);
+            } else {
+                setSlideRows([]);
+            }
+        } else {
+            setSlideRows(slides[category])
+        }
+    }, [searchTerm])
 
 
     return (
@@ -71,6 +95,8 @@ export default function BrowseContainer({ slides }) {
                 </Header>
             <Card.Group>
                 {
+                    slideRows.length <= 0 ? <h1 style={{ color: "white", textAlign: "center", fontWeight: "500", padding: "100px 20px" }}>Sorry, we could not find movies or series matching your query.</h1>
+                        :
                     slideRows.map(slideItem => (
                         <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
                             <Card.Title>{slideItem.title}</Card.Title>
