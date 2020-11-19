@@ -20,6 +20,7 @@ export function seedDatabase(firebase) {
     genre: 'documentaries',
     maturity: '18',
     slug: 'tiger-king',
+    actor: "Bette Davis"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -28,6 +29,7 @@ export function seedDatabase(firebase) {
     genre: 'documentaries',
     maturity: '12',
     slug: 'amanda-knox',
+    actor: "Cate Blanchett"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -37,6 +39,7 @@ export function seedDatabase(firebase) {
     genre: 'documentaries',
     maturity: '12',
     slug: 'citizenfour',
+    actor: "JLeonardo DiCaprio"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -46,6 +49,7 @@ export function seedDatabase(firebase) {
     genre: 'documentaries',
     maturity: '12',
     slug: 'super-size-me',
+    actor: "Gregory Peck"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -55,6 +59,7 @@ export function seedDatabase(firebase) {
     genre: 'documentaries',
     maturity: '12',
     slug: 'man-on-wire',
+    actor: "Gregory Peck"
   });
 
   // Comedies
@@ -66,6 +71,7 @@ export function seedDatabase(firebase) {
     genre: 'comedies',
     maturity: '15',
     slug: 'the-office',
+    actor: "Katharine Hepburn"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -75,6 +81,7 @@ export function seedDatabase(firebase) {
     genre: 'comedies',
     maturity: '15',
     slug: 'arrested-development',
+    actor: "Katharine Hepburn"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -84,6 +91,7 @@ export function seedDatabase(firebase) {
     genre: 'comedies',
     maturity: '15',
     slug: 'curb-your-enthusiasm',
+    actor: "Daniel Day-Lewis"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -93,6 +101,7 @@ export function seedDatabase(firebase) {
     genre: 'comedies',
     maturity: '15',
     slug: 'family-guy',
+    actor: "Meryl Streep"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -102,6 +111,7 @@ export function seedDatabase(firebase) {
     genre: 'comedies',
     maturity: '15',
     slug: 'south-park',
+    actor: "Jack Nicholson"
   });
 
   // Children
@@ -113,6 +123,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'peppa-pig',
+    actor: "Daniel Day-Lewis"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -122,6 +133,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'dora-the-explorer',
+    actor: "Sidney Poitier\n"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -131,6 +143,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'paw-patrol',
+    actor: "Jack Nicholson"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -140,6 +153,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'arthur',
+    actor: "Clark Gable"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -149,6 +163,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'spongebob',
+    actor: "Elizabeth Taylor"
   });
 
   // Crime
@@ -160,6 +175,7 @@ export function seedDatabase(firebase) {
     genre: 'crime',
     maturity: '18',
     slug: 'making-a-murderer',
+    actor: "Cate Blanchett"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -169,6 +185,7 @@ export function seedDatabase(firebase) {
     genre: 'crime',
     maturity: '18',
     slug: 'long-shot',
+    actor: "Jack Nicholson"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -178,6 +195,7 @@ export function seedDatabase(firebase) {
     genre: 'crime',
     maturity: '18',
     slug: 'the-confession-killer',
+    actor: "Jack Nicholson"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -187,6 +205,7 @@ export function seedDatabase(firebase) {
     genre: 'crime',
     maturity: '18',
     slug: 'the-innocent-man',
+    actor: "Jack Nicholson"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -196,6 +215,7 @@ export function seedDatabase(firebase) {
     genre: 'crime',
     maturity: '18',
     slug: 'the-staircase',
+    actor: "Cate Blanchett"
   });
 
   // Feel-good
@@ -207,6 +227,7 @@ export function seedDatabase(firebase) {
     genre: 'feel-good',
     maturity: '12',
     slug: 'good-will-hunting',
+    actor: "Jack Nicholson"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -216,6 +237,7 @@ export function seedDatabase(firebase) {
     genre: 'feel-good',
     maturity: '12',
     slug: 'forrest-gump',
+    actor: "Leonardo DiCaprio"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -225,6 +247,7 @@ export function seedDatabase(firebase) {
     genre: 'feel-good',
     maturity: '12',
     slug: 'juno',
+    actor: "Leonardo DiCaprio"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -234,6 +257,7 @@ export function seedDatabase(firebase) {
     genre: 'feel-good',
     maturity: '12',
     slug: 'midnight-in-paris',
+    actor: "Gregory Peck"
   });
   firebase.firestore().collection('series').add({
     id: getUUID(),
@@ -243,6 +267,7 @@ export function seedDatabase(firebase) {
     genre: 'feel-good',
     maturity: '12',
     slug: 'school-of-rock',
+    actor: "Jack Nicholson"
   });
 
   /* Films
@@ -256,6 +281,7 @@ export function seedDatabase(firebase) {
     genre: 'drama',
     maturity: '15',
     slug: 'the-prestige',
+    actor: "Elizabeth Taylor"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -265,6 +291,7 @@ export function seedDatabase(firebase) {
     genre: 'drama',
     maturity: '15',
     slug: 'fight-club',
+    actor: "Jack Nicholson"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -274,6 +301,7 @@ export function seedDatabase(firebase) {
     genre: 'drama',
     maturity: '15',
     slug: 'kings-speech',
+    actor: "Jack Nicholson"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -283,6 +311,7 @@ export function seedDatabase(firebase) {
     genre: 'drama',
     maturity: '15',
     slug: 'the-revenant',
+    actor: "Elizabeth Taylor"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -292,6 +321,7 @@ export function seedDatabase(firebase) {
     genre: 'drama',
     maturity: '12',
     slug: 'the-social-network',
+    actor: "Bette Davis"
   });
 
   // Suspense
@@ -303,6 +333,7 @@ export function seedDatabase(firebase) {
     genre: 'suspense',
     maturity: '15',
     slug: 'shutter-island',
+    actor: "Jack Nicholson"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -312,6 +343,7 @@ export function seedDatabase(firebase) {
     genre: 'suspense',
     maturity: '15',
     slug: 'gone-girl',
+    actor: "Clark Gable"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -321,6 +353,7 @@ export function seedDatabase(firebase) {
     genre: 'suspense',
     maturity: '15',
     slug: 'prisoners',
+    actor: "Elizabeth Taylor"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -330,6 +363,7 @@ export function seedDatabase(firebase) {
     genre: 'suspense',
     maturity: '15',
     slug: 'seven',
+    actor: "Ingrid Bergman"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -339,6 +373,7 @@ export function seedDatabase(firebase) {
     genre: 'suspense',
     maturity: '15',
     slug: 'zodiac',
+    actor: "Sidney Poitier"
   });
 
   // Children
@@ -350,6 +385,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'hotel-transylvania',
+    actor: "Sidney Poitier"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -359,6 +395,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'despicable-me',
+    actor: "Humphrey Bogart"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -368,6 +405,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'frozen',
+    actor: "Meryl Streep"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -377,6 +415,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'spirited-away',
+    actor: "Jack Nicholson"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -386,6 +425,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'up',
+    actor: "Daniel Day-Lewis"
   });
 
   // Thriller
@@ -397,6 +437,7 @@ export function seedDatabase(firebase) {
     genre: 'thriller',
     maturity: '15',
     slug: 'joker',
+    actor: "Meryl Streep"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -406,6 +447,7 @@ export function seedDatabase(firebase) {
     genre: 'thriller',
     maturity: '15',
     slug: 'a-quiet-place',
+    actor: "Jack Nicholson"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -415,6 +457,7 @@ export function seedDatabase(firebase) {
     genre: 'thriller',
     maturity: '15',
     slug: 'black-swan',
+    actor: "Humphrey Bogart"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -424,6 +467,7 @@ export function seedDatabase(firebase) {
     genre: 'thriller',
     maturity: '15',
     slug: 'nightcrawler',
+    actor: "Katharine Hepburn"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -433,6 +477,7 @@ export function seedDatabase(firebase) {
     genre: 'thriller',
     maturity: '15',
     slug: 'the-silence-of-the-lambs',
+    actor: "Marlon Brando"
   });
 
   // Romance
@@ -444,6 +489,7 @@ export function seedDatabase(firebase) {
     genre: 'romance',
     maturity: '15',
     slug: 'a-star-is-born',
+    actor: "Jack Nicholson"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -453,6 +499,7 @@ export function seedDatabase(firebase) {
     genre: 'romance',
     maturity: '15',
     slug: 'blue-valentine',
+    actor: "Robert De Niro"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -462,6 +509,7 @@ export function seedDatabase(firebase) {
     genre: 'romance',
     maturity: '15',
     slug: 'la-la-land',
+    actor: "Denzel Washington"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -471,6 +519,7 @@ export function seedDatabase(firebase) {
     genre: 'romance',
     maturity: '15',
     slug: 'the-notebook',
+    actor: "Jack Nicholson"
   });
   firebase.firestore().collection('films').add({
     id: getUUID(),
@@ -480,5 +529,6 @@ export function seedDatabase(firebase) {
     genre: 'romance',
     maturity: '15',
     slug: 'titanic',
+    actor: "Robert De Niro"
   });
 }

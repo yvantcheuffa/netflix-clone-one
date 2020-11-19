@@ -15,10 +15,10 @@ const config = {
   projectId: "netflix-clone-9c04d",
   storageBucket: "netflix-clone-9c04d.appspot.com",
   messagingSenderId: "628829719436",
-  appId: "1:628829719436:web:41452cbc6d40361120e4a9",
-  measurementId: "G-MPD9YBZ2YP"
+  appId: "1:628829719436:web:35d262d88571906020e4a9",
+  measurementId: "G-W8H9ESWT17"
 };
 const firebase = Firebase.initializeApp(config);
-// seedDatabase(firebase);
+//seedDatabase(firebase);
 
 export { firebase }

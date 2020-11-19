@@ -189,6 +189,27 @@ export const SearchInput = styled.input`
     padding: ${({active}) => (active === true ? '0 10px' : '0')};
     opacity: ${({active}) => (active === true ? '1' : '0')};
     width: ${({active}) => (active === true ? '200px' : '0')};
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #fff;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color:    #fff;
+       opacity:  1;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color:    #fff;
+       opacity:  1;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color:    #fff;
+    }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+       color:    #fff;
+    }
+    
+    ::placeholder { /* Most modern browsers support this now. */
+       color:    #fff;
+    }
 `;
 
 export const PlayButton = styled.button`

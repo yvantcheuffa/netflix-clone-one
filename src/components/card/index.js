@@ -99,10 +99,11 @@ Card.Feature = function CardFeature({ category, children, ...restProps }) {
                         { itemFeature.genre.charAt(0).toUpperCase() + itemFeature.genre.slice(1) }
                     </FeatureText>
                 </Group>
+                <h4 style={{ color: "white", marginBottom: "25px" }}>Actor: { itemFeature.actor }</h4>
                 {children}
             </Content>
         </Feature>
-    ) : (null)
+    ) : null
     
 }
 
